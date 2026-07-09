@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Projetos\apiTest\webserviceteste-back-front\api"/>
 			<item value="C:\Projetos\apiTest\api"/>
 			<item value="C:\Projetos\apiTest\projeto"/>
 		</list>
