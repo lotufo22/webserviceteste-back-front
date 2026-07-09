@@ -13,15 +13,18 @@
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="br.com.criandoapi.projeto.DAO.IUsuario"/>
     <fullyQualifiedTypeName name="java.lang.Iterable"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
-    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
     <fullyQualifiedTypeName name="org.springframework.data.repository.CrudRepository"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
+    <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="br.com.criandoapi.projeto.repository.IUsuario"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
 </qualifiedTypeNameHistroy>
