@@ -6,10 +6,19 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.Data;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 // Annotation de Lombok para os métodos especiais da classe
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 
 @Entity
 @Table(name="usuario")
@@ -20,15 +29,21 @@ public class Usuario {
 	@Column(name = "id")
 	private Integer id;
 	
-	@Column(name = "nome", length = 200, nullable = true)
+	@Size(min = 3, max = 200, message = "Mínimo 3 e máximo 200 caracteres!")
+	@NotBlank(message = "Nome obrigatório!")
+	@Column(name = "nome", length = 200, nullable = false)
 	private String nome;
 	
-	@Column(name = "email", length = 100, nullable = true)
+	@Email(message = "Email inválido")
+	@NotBlank(message = "Email obrigatório!")
+	@Column(name = "email", length = 100, nullable = false)
 	private String email;
 
-	@Column(name = "senha", columnDefinition = "TEXT", nullable = true)
+	@NotBlank(message = "Senha obrigatória!")
+	@Column(name = "senha", columnDefinition = "TEXT", nullable = false)
 	private String senha;
 	
-	@Column(name = "telefone", length = 15, nullable = true)
+	@NotBlank(message = "Telefone obrigatório!")
+	@Column(name = "telefone", length = 15, nullable = false)
 	private String telefone;
 }
