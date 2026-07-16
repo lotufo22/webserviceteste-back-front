@@ -40,11 +40,11 @@ public class TokenUtil {
 		return expiration.after(new Date(System.currentTimeMillis()));
 	}
 	
-	public static boolean isEmissorValid(String emissor) {
+	private static boolean isEmissorValid(String emissor) {
 		return emissor.equals(EMISSOR);
 	}
 	
-	public static boolean isSubjectValid(String username) {
+	private static boolean isSubjectValid(String username) {
 		return username != null && username.length() > 0;
 	}
 	
