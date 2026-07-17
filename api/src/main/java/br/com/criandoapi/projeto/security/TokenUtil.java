@@ -61,7 +61,7 @@ public class TokenUtil {
 		Date expira = jwsClaims.getBody().getExpiration();
 		
 		if(isSubjectValid(username) && isEmissorValid(issuer) && isExpirationValid(expira)) {
-			return new UsernamePasswordAuthenticationToken(issuer, null,Collections.emptyList());
+			return new UsernamePasswordAuthenticationToken(username, null,Collections.emptyList());
 		}
 		
 		return null;

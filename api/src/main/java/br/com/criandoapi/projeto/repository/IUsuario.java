@@ -14,4 +14,7 @@ public interface IUsuario extends JpaRepository<Usuario, Integer> {
 	
 	// JpaRepository<Usuario, Integer>
 	// Esta interface retorna uma List como findAll 
+	
+	boolean existsByNome(String nome);
+	boolean existsByEmail(String email);
 }

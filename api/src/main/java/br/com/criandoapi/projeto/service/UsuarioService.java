@@ -1,6 +1,8 @@
 package br.com.criandoapi.projeto.service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -9,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import br.com.criandoapi.projeto.dto.UsuarioDto;
 import br.com.criandoapi.projeto.entities.Usuario;
+import br.com.criandoapi.projeto.exceptions.DadosDuplicadosException;
 import br.com.criandoapi.projeto.repository.IUsuario;
 import br.com.criandoapi.projeto.security.Token;
 import br.com.criandoapi.projeto.security.TokenUtil;
@@ -37,6 +40,19 @@ public class UsuarioService {
 	}
 	
 	public Usuario salvarUsuario(Usuario usuario) {
+		Map<String, String> errors = new HashMap<>();
+		
+		if(repository.existsByNome(usuario.getNome())) {
+			errors.put("nome", "Nome de usuário já existe");
+		}
+		if(repository.existsByEmail(usuario.getEmail())) {
+			errors.put("email", "Email já existe");
+		}
+		
+		if(!errors.isEmpty()) {
+			throw new DadosDuplicadosException(errors);
+		}
+		
 		String encoder = this.passwordEncoder.encode(usuario.getSenha());
 		usuario.setSenha(encoder);
 		Usuario novoUsuario = repository.save(usuario);

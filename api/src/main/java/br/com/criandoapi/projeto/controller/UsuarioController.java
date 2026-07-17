@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.criandoapi.projeto.dto.UsuarioDto;
 import br.com.criandoapi.projeto.entities.Usuario;
+import br.com.criandoapi.projeto.exceptions.DadosDuplicadosException;
 import br.com.criandoapi.projeto.security.Token;
 import br.com.criandoapi.projeto.service.UsuarioService;
 import jakarta.validation.Valid;
@@ -86,5 +87,11 @@ public class UsuarioController {
 		});
 		
 		return errors;
+	}
+	
+	@ResponseStatus(HttpStatus.CONFLICT)
+	@ExceptionHandler(DadosDuplicadosException.class)
+	public Map<String, String> handleEmailDuplicado(DadosDuplicadosException ex){
+		return ex.getErrors();
 	}
 }
