@@ -25,7 +25,7 @@ function login() {
     .then((dados) => {
         localStorage.setItem("token", dados.token);
 
-        window.location.href = "../index.html";
+        window.location.href = "./index.html";
     })
     .catch((err) => {
         console.error("Falha ao logar: ", erro);

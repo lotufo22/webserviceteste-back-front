@@ -32,7 +32,7 @@ function cadastrar () {
         })
         .then(function(dados) {
             console.log("Cadastro realizado: ", dados);
-            window.location.href = "../login.html"
+            window.location.href = "./login.html"
         })
         .catch(function(erro) {
             const erroCadastro = document.querySelector("#erroCadastro");

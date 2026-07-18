@@ -1,19 +1,15 @@
 function protegerPagina(){
     const token = localStorage.getItem("token");
     if(!token) {
-        window.location.href = "../login.html"
+        window.location.href = "./login.html"
     }
 }
 
 function atualizarBotoesAuth(){
     const token = localStorage.getItem("token");
 
-        console.log("Token encontrado:", token); // <- debug temporário
-
     const btnLogin = document.querySelector("#btnLogin");
     const btnLogout = document.querySelector("#btnLogout");
-
-    console.log("btnLogin existe?", !!btnLogin, "btnLogout existe?", !!btnLogout); // <- debug temporário
 
     if (!btnLogin || !btnLogout) return;
 
