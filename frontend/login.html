@@ -4,34 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/navbar.css">
     <script src="/js/login.js" defer></script>
     <title>Projeto API</title>
 </head>
 
 <body>
-    
-    <header class="nav">
-        <nav class="navbar">
-            <div class="paragrafo">
-                <p class="cadastrar">Ainda não possui cadastro?</p>
-            </div>
-            <div class="botão">
-                <a href="cadastro.html" class="btnCadastro">
-                    <button>Cadastrar</button>
-                </a>
-            </div>
-        </nav>
-    </header>
+        <div id="navbar-container" class="nav">
+            <nav class="navbar">
 
-    <div class="box">
-        <h1>Login</h1>
-        <form class="loginForm" action="">
-            <input type="text" class="nome" name="nome" placeholder="Nome" required>
-            <input type="password" class="senha" name="senha" placeholder="Senha" required>
-            <button type="submit">Cadastrar</button>
-        </form>
-        <p id="erroLogin"></p>
+                <div class="navbar-logo">
+                <a href="index.html">
+                    <img src="../../assets/images/logo.png" alt="Logo">
+                </a>
+                </div>
+
+                <ul class="navbar-menu">
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+
+                <div class="navbar-actions">
+                    <p class="cadastrar">Ainda não possui cadastro?</p>
+
+                    <a href="cadastro.html" class="btn-login">Cadastrar</a>
+                </div>
+            </nav>
+        </div>
+
+    <div class="container-form">
+        <div class="box">
+            <h1>Login</h1>
+            <form class="loginForm" action="">
+                <input type="text" class="nome" name="nome" placeholder="Nome" required>
+                <input type="password" class="senha" name="senha" placeholder="Senha" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <p id="erroLogin"></p>
+        </div>
     </div>
 
 </body>

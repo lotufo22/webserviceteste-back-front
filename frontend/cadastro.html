@@ -3,29 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/navbar.css">
     <title>Projeto API</title>
 </head>
 
 <body>
-    <div id="navbar-container"></div>
+    <div id="navbar-container" class="nav"></div>
 
-    <div class="box">
-        <h1>Cadastro</h1>
-        <form action="">
-            <input type="text" class="nome" name="nome" placeholder="Nome" required>
-            <input type="text"class="email" name="email" placeholder="Email"required>
-            <input type="password" class="senha" name="senha" placeholder="Senha" required>
-            <input type="text" class="tel" name="tel" placeholder="Telefone" required>
-            <button type="submit">Cadastrar</button>
-        </form>
-        <p id="erroCadastro" class="mensagemErro"></p>
+    <div class="container-form">
+        <div class="box">
+            <h1>Cadastro</h1>
+            <form action="">
+                <input type="text" class="nome" name="nome" placeholder="Nome" required>
+                <input type="text"class="email" name="email" placeholder="Email"required>
+                <input type="password" class="senha" name="senha" placeholder="Senha" required>
+                <input type="text" class="tel" name="tel" placeholder="Telefone" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <p id="erroCadastro" class="mensagemErro"></p>
+        </div>
     </div>
 
 </body>
 
-    <script src="/js/cadastro.js"></script>
-    <script src="js/auth.js"></script>
-    <script src="/js/includeNavbar.js"></script>
+    <script src="js/cadastro.js"></script>
+    <script src="js/auth/auth.js"></script>
+    <script src="components/navbar/includeNavbar.js"></script>
 
 </html>
